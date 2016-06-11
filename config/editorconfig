@@ -1,0 +1,33 @@
+# http://editorconfig.org
+root = true
+# root
+# indent_style
+# indent_size
+# tab_width
+# end_of_line
+# charset
+# insert_final_newline
+# trim_trailing_whitespace
+# max_line_length
+
+[*]
+# trim_trailing_whitespace = true
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+tab_width=4
+indent_style = space
+indent_size = 4
+max_line_length=80
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.md]
+indent_style = space
+trim_trailing_whitespace = false
