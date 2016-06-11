@@ -1,0 +1,64 @@
+# ~/.zshrc
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="ys"
+
+HIST_STAMPS="mm/dd/yyyy"
+HISTSIZE=10000
+SAVEHIST=10000
+SHARE_HISTORY=0
+
+# my :gun + cmd  gbk exec cmd
+plugins=(osx brew brew-cask zsh-syntax-highlighting sudo zsh_reload my git autojump)
+
+source $ZSH/oh-my-zsh.sh
+
+ # for mac
+GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
+export GOPATH=~/code/go
+export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION/libexec
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
+if [ ! $SSH_CONNECTION  ] ; then
+export IP="127.0.0.1"
+else
+export IP=`echo $SSH_CONNECTION|awk '{print $3}'`
+fi
+
+# Example aliases
+alias czsh="vi ~/.zshrc"
+alias cvi="vi ~/.vimrc"
+alias cls="clear"
+alias grep="grep --color=auto"
+alias -s html=gvim # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
+alias -s rb=gvim   # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
+alias -s js=gvim
+alias -s c=gvim
+alias -s cpp=gvim
+alias -s h=gvim
+alias -s conf=gvim
+alias -s java=gvim
+alias -s rst=gvim
+alias -s go=gvim
+alias -s txt=gvim
+alias -s gz='tar -xzvf'
+alias -s tgz='tar -xzvf'
+alias -s zip='unzip'
+alias -s bz2='tar -xjvf'
+#macdown 打开md
+alias -s md=gvim
+
+# FileSearch
+function f() { find . -iname "*$1*" ${@:2} }
+function r() { grep "$1" ${@:2} -n -R  . }
+
+#mkdir and cd
+function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+# Aliases
+alias cppcompile='c++ -std=c++11 -stdlib=libc++'
+
+setopt nonomatch
+
+export PATH="/usr/local/sbin:$PATH"
