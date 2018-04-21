@@ -10,14 +10,8 @@ SAVEHIST=10000
 SHARE_HISTORY=0
 
 # my :gun + cmd  gbk exec cmd
-plugins=(osx brew brew-cask zsh-syntax-highlighting sudo zsh_reload my git autojump)
+plugins=(zsh-syntax-highlighting sudo zsh_reload my git autojump)
 
-
- # for mac
-GOVERSION=$(brew list go | head -n 1 | cut -d '/' -f 6)
-export GOROOT=$(brew --prefix)/Cellar/go/$GOVERSION/libexec
-export GOPATH=~/Documents/code/go_third:~/Documents/code/go
-export PATH=$GOROOT/bin:~/Documents/code/go_third/bin:~/Documents/code/go:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
