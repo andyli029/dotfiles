@@ -65,6 +65,7 @@ Plug 'fatih/vim-go',{ 'do': ':GoInstallBinaries' }
 Plug 'Valloric/YouCompleteMe',  { 'do': './install.py --clang-completer' }
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'vim-scripts/a.vim'
+Plug 'rhysd/vim-clang-format'
  
 " for file type
 Plug 'mileszs/ack.vim'
