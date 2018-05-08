@@ -20,6 +20,13 @@
 - install vim plugin
     - `  vim +PlugInstall +qall `
 *PS*: vim-go 插件安装需要翻墙配置代理
+# [http]
+#     proxy = socks5://127.0.0.1:8899
+#[https]
+#     proxy = socks5://127.0.0.1:8899
+
+#cp .ycm_extra_conf.py /root/.ycm_extra_conf.py
+
 
 ## zsh 
 - 修改默认shell
