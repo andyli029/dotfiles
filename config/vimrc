@@ -35,7 +35,7 @@ set wildignore+=*.o,*~,*.pyc,*.class,*.swp
 
 call plug#begin('~/.vim/plugged')
 " color
-" Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/Mark'
@@ -62,7 +62,7 @@ Plug 'fatih/vim-go',{ 'do': ':GoInstallBinaries' }
 
 
 " C/C++
-Plug 'Valloric/YouCompleteMe',  { 'do': './install.py --clang-completer' }
+"Plug 'Valloric/YouCompleteMe',  { 'do': './install.py --clang-completer' }
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'vim-scripts/a.vim'
 Plug 'rhysd/vim-clang-format'
@@ -76,10 +76,10 @@ Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " solarized plugin settings
-" set t_Co=256
-" set background=dark
-" let g:solarized_termcolors=256
-" colorscheme solarized
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " airline and airline_theme settings
 set laststatus=2
