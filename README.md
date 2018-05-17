@@ -25,7 +25,7 @@
 #[https]
 #     proxy = socks5://127.0.0.1:8899
 
-#cp .ycm_extra_conf.py /root/.ycm_extra_conf.py
+#cp $(DOTFILEPATH)/vim/.ycm_extra_conf.py /root/.ycm_extra_conf.py
 
 
 ## zsh 
